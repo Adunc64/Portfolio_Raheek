@@ -27,14 +27,17 @@ export default function SkillsScreen() {
     { name: 'PHP' },
     { name: 'JavaScript' },
     { name: 'SQL' },
-    { name: 'C/C++' },
+    { name: 'C' },
+    { name: 'C#' },
   ];
 
   const webSkills = [
     { name: 'React' },
     { name: 'Flask' },
-    { name: 'HTML/CSS' },
-    { name: 'Node.js/Express' },
+    { name: 'HTML' },
+    { name: 'CSS' },
+    { name: 'Node.js' },
+    { name: 'ASP.NET' },
   ];
 
   const databaseSkills = [
@@ -46,20 +49,24 @@ export default function SkillsScreen() {
 
   const aiMlSkills = [
     { name: 'PyTorch' },
-    { name: 'CNNs' },
+    { name: 'TensorFlow' },
     { name: 'Vision Transformer' },
     { name: 'Data Preprocessing' },
     { name: 'Model Training' },
+    { name: 'Langchain' },
+    { name: 'RAG' },
   ];
 
   const toolsSkills = [
     { name: 'Git/GitHub' },
-    { name: 'MS Excel' },
+    { name: 'MS Office' },
     { name: 'Looker' },
     { name: 'Figma' },
     { name: 'Jupyter Notebook' },
     { name: 'VS Code' },
     { name: 'PyCharm' },
+    { name: 'Ollama' },
+    { name: 'Power BI' }
   ];
 
   return (

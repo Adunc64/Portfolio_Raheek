@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => (
       <Ionicons name="folder" size={32} color="#6366f1" />
       <View style={styles.projectTitleContainer}>
         <Text style={styles.projectTitle}>{project.title}</Text>
-        <Text style={styles.projectDate}>{project.date}</Text>
+        <Text style={styles.projectType}>{project.type}</Text>
       </View>
     </View>
     <Text style={styles.projectDescription}>{project.description}</Text>
@@ -55,7 +55,7 @@ export default function ProjectsScreen() {
   const projects = [
     {
       title: 'Schizophrenia Detection using Deep Learning',
-      date: '2024',
+      type: 'Undergraduate Thesis',
       description:
         'Developed a hybrid 3D ConvNeXt–ViT model for schizophrenia detection on 4D fMRI data, using TorchIO-based preprocessing and 5-fold cross-validation on the COBRE dataset, achieving 91.06% accuracy. This undergraduate research project demonstrates expertise in computer vision and medical imaging.',
       technologies: ['PyTorch', 'TorchIO', 'NiBabel', 'NumPy', 'Matplotlib', 'Python'],
@@ -63,15 +63,27 @@ export default function ProjectsScreen() {
     },
     {
       title: 'Krishi Network',
-      date: '2024',
-      description:
-        'An e-marketplace platform connecting farmers with agricultural experts and sellers, built with React for frontend and Node.js/Express for backend and MongoDB database integration. Facilitates seamless communication and trade in the agricultural sector.',
+      type: 'e-marketplace platform',
+      description: [
+        'Created an e-marketplace platform connecting farmers with agricultural experts and product sellers',
+        // Add more bullet points here as needed
+        // 'Implemented real-time chat between farmers and experts',
+        // 'Integrated payment gateway for seamless transactions',
+      ],      
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
       github: 'https://github.com/AlviNoob/krishinetwork',
     },
     {
+      title: 'AI PDF Reader',
+      type: 'Personal Portfolio',
+      description:
+        'A personal portfolio website built using React and hosted on GitHub Pages, showcasing projects, skills, and experience with a clean and responsive design. Demonstrates proficiency in frontend development and web design.',
+      technologies: ['LangChain', 'Ollama', 'ChromaDB', 'Streamlit'],
+      github: 'https://github.com/Adunc64/Personal-Portfolio',
+    },
+    {
       title: 'Exchangeify - E-Commerce Website',
-      date: '2023',
+      type: 'e-commerce web application',
       description:
         'Flask-based web application that serves as a multi-purpose buy, sell, exchange platform with real-time chat implemented. Provides a comprehensive solution for online trading and communication.',
       technologies: ['Python', 'Flask', 'HTML', 'CSS', 'WebSockets'],
@@ -79,7 +91,7 @@ export default function ProjectsScreen() {
     },
     {
       title: 'Club Management System',
-      date: '2023',
+      type: 'Management based web application',
       description:
         'A university club management website built using PHP for the backend, MySQL for the database, and HTML/CSS for the frontend. Streamlines club operations and member management.',
       technologies: ['PHP', 'MySQL', 'HTML', 'CSS'],
@@ -87,7 +99,7 @@ export default function ProjectsScreen() {
     },
     {
       title: 'Bubble Shooter Game',
-      date: '2022',
+      type: '2D Game',
       description:
         'A 2D bubble shooter game implemented using OpenGL and Python with multiple levels, power-ups, and physics-based bubble mechanics. Demonstrates proficiency in game development and graphics programming.',
       technologies: ['Python', 'OpenGL', 'Game Development'],
@@ -102,7 +114,7 @@ export default function ProjectsScreen() {
       resizeMode="cover"
     >
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-        <Text style={styles.headerTitle}>My Projects</Text>
+        <Text style={styles.headerTitle}>My Projects/Thesis</Text>
         <Text style={styles.headerSubtitle}>
           A collection of my recent work and side projects
         </Text>
