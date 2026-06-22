@@ -20,7 +20,16 @@ const ProjectCard = ({ project }) => (
         <Text style={styles.projectType}>{project.type}</Text>
       </View>
     </View>
-    <Text style={styles.projectDescription}>{project.description}</Text>
+    
+
+    <View style={styles.projectDescription}>
+      {project.description.map((description, index) => (
+        <Text key={index} style={styles.descriptionItem}>
+          • {description}
+        </Text>
+      ))}
+    </View>
+
     <View style={styles.techStack}>
       {project.technologies.map((tech, index) => (
         <View key={index} style={styles.techTag}>
@@ -56,8 +65,9 @@ export default function ProjectsScreen() {
     {
       title: 'Schizophrenia Detection using Deep Learning',
       type: 'Undergraduate Thesis',
-      description:
-        'Developed a hybrid 3D ConvNeXt–ViT model for schizophrenia detection on 4D fMRI data, using TorchIO-based preprocessing and 5-fold cross-validation on the COBRE dataset, achieving 91.06% accuracy. This undergraduate research project demonstrates expertise in computer vision and medical imaging.',
+      description: [
+        'Developed a hybrid 3D ConvNeXt–ViT model for schizophrenia detection on 4D fMRI data, using TorchIO-based preprocessing and 5-fold cross-validation on the COBRE dataset, achieving 91.06% accuracy. This undergraduate research project demonstrates expertise in computer vision and medical imaging.'
+      ],
       technologies: ['PyTorch', 'TorchIO', 'NiBabel', 'NumPy', 'Matplotlib', 'Python'],
       github: 'https://github.com/DragzterX/Thesis-T2420320',
     },
@@ -66,9 +76,8 @@ export default function ProjectsScreen() {
       type: 'e-marketplace platform',
       description: [
         'Created an e-marketplace platform connecting farmers with agricultural experts and product sellers',
-        // Add more bullet points here as needed
-        // 'Implemented real-time chat between farmers and experts',
-        // 'Integrated payment gateway for seamless transactions',
+        'Developed the frontend in React and built RESTful APIs with Node.js/Express, backed by MongoDB.',
+        'Focused on a user-friendly interface and smooth data flow between client and server for listings and consultations',
       ],      
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
       github: 'https://github.com/AlviNoob/krishinetwork',
@@ -76,32 +85,44 @@ export default function ProjectsScreen() {
     {
       title: 'AI PDF Reader',
       type: 'Personal Portfolio',
-      description:
-        'A personal portfolio website built using React and hosted on GitHub Pages, showcasing projects, skills, and experience with a clean and responsive design. Demonstrates proficiency in frontend development and web design.',
+      description: [
+        'Developed a fully local AI-powered PDF Reader using Retrieval-Augmented Generation (RAG) with semantic search and context-aware question answering.',
+        'Implemented PDF text extraction, automatic text chunking, embedding generation, and vector storage using ChromaDB for efficient information retrieval.',
+        'Built an interactive chat interface with Streamlit and integrated Ollama-based local LLMs to enable accurate question answering without requiring internet access or API keys.',
+      ],
       technologies: ['LangChain', 'Ollama', 'ChromaDB', 'Streamlit'],
       github: 'https://github.com/Adunc64/Personal-Portfolio',
     },
     {
-      title: 'Exchangeify - E-Commerce Website',
+      title: 'Exchangeify',
       type: 'e-commerce web application',
-      description:
-        'Flask-based web application that serves as a multi-purpose buy, sell, exchange platform with real-time chat implemented. Provides a comprehensive solution for online trading and communication.',
+      description: [
+        'Built a multi-purpose e-commerce web application with Flask, enabling users to buy, sell, and exchange items.',
+        'Integrated real-time chat functionality to facilitate direct communication between buyers and sellers.',
+        'Structured modular backend routes and templates to support scalable feature additions.'
+      ],
       technologies: ['Python', 'Flask', 'HTML', 'CSS', 'WebSockets'],
       github: 'https://github.com/Adunc64/ECommerce_exchangeify',
     },
     {
       title: 'Club Management System',
       type: 'Management based web application',
-      description:
-        'A university club management website built using PHP for the backend, MySQL for the database, and HTML/CSS for the frontend. Streamlines club operations and member management.',
+      description: [
+        'Developed a university club management web application using PHP (backend), MySQL (database), and HTML/CSS (frontend).',
+        'Implemented features to manage club members, events, and activities in a centralized platform.',
+        'Designed and integrated database schemas to store user, event, and club information efficiently.'
+      ],
       technologies: ['PHP', 'MySQL', 'HTML', 'CSS'],
       github: 'https://github.com/Adunc64/Club-Management-Project',
     },
     {
       title: 'Bubble Shooter Game',
       type: '2D Game',
-      description:
-        'A 2D bubble shooter game implemented using OpenGL and Python with multiple levels, power-ups, and physics-based bubble mechanics. Demonstrates proficiency in game development and graphics programming.',
+      description: [
+        'Implemented a 2D bubble shooter game in Python using OpenGL for rendering.',
+        'Added multiple levels, power-ups, and physics-based bubble mechanics for engaging gameplay.',
+        'Organized game logic and rendering code for easier maintenance and extension of features.'
+      ],
       technologies: ['Python', 'OpenGL', 'Game Development'],
       github: 'https://github.com/Adunc64/Bubble_shoot_game',
     },
