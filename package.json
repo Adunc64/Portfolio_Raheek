@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build": "EXPO_WEB_BUNDLER=webpack npx expo export --platform web --output-dir dist"
+    "build": "npx expo export --platform web --output-dir dist",
+    "vercel-build": "npx expo export --platform web --output-dir dist"
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
