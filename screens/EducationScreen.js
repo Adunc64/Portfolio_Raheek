@@ -49,7 +49,7 @@ export default function EducationScreen() {
       institution: 'BRAC University',
       duration: '2021 - 2025',
       description:
-        'Focused on software engineering, algorithms, data structures, web development, and machine learning. Completed undergraduate research on deep learning for medical imaging. CGPA: 3.12',
+        'Focused on software engineering, algorithms, data structures, web development, and machine learning. Completed undergraduate research on deep learning for medical imaging.',
       courses: [
         'Data Structures and Algorithms',
         'Software Engineering',
